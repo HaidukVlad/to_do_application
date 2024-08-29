@@ -1,0 +1,81 @@
+.app {
+    background-color: #121212;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.backToIntro {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.input-container:first-child {
+    margin-bottom: 50px;
+}
+
+.input-container label, .input-container input {
+    color: #fff;
+    font-size: 16px;
+}
+
+.input-container input {
+    height: 48px;
+    border: 1px solid #979797;
+    border-radius: 4px;
+    background: #1D1D1D;
+    padding-left: 10px;
+}
+
+.loginBtn {
+    height: 48px;
+    width: 100%;
+    background: #8687E7;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    margin-bottom: 48px;
+}
+
+.loginBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.or-block {
+    display: flex;
+    flex-direction: row;
+    color: #979797;
+    font-size: 16px;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 48px;
+}
+
+.or-block span {
+    background: #979797;
+    height: 1px;
+    width: 50%;
+}
