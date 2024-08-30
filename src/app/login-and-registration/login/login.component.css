@@ -29,11 +29,11 @@ h1 {
     flex-direction: column;
     height: 80px;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
 .input-container:first-child {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .input-container label, .input-container input {
@@ -67,6 +67,7 @@ h1 {
 .or-block {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     color: #979797;
     font-size: 16px;
     align-items: center;
@@ -77,5 +78,40 @@ h1 {
 .or-block span {
     background: #979797;
     height: 1px;
-    width: 50%;
+    width: 48.7%;
+    margin-top: 5px;
+}
+
+.another-wayBtn {
+    height: 48px;
+    color: rgba(255, 255, 255, 0.87);
+    border: 1px solid #8875FF;
+    border-radius: 4px;
+    background: none;
+    font-size: 16px;
+    width: 100%;
+}
+
+.googleBtn {
+    margin-bottom: 20px;
+}
+
+.appleBtn {
+    margin-bottom: 48px;
+}
+
+.register {
+    color: #979797;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.register a {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.register a:hover {
+    text-decoration: underline;
 }
