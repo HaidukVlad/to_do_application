@@ -16,6 +16,12 @@
 
     margin-bottom: 50px;
     margin-top: 20px;
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.backToIntro:hover {
+    transform: scale(1.1);
 }
 
 h1 {
@@ -49,6 +55,10 @@ h1 {
     padding-left: 10px;
 }
 
+.input-container input:active {
+    background: #1D1D1D;
+}
+
 .loginBtn {
     height: 48px;
     width: 100%;
@@ -62,6 +72,11 @@ h1 {
 .loginBtn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+    transition: transform 0.2s ease-in-out;
+}
+
+.loginBtn:enabled:hover {
+    transform: scale(1.05);
 }
 
 .or-block {
@@ -90,6 +105,13 @@ h1 {
     background: none;
     font-size: 16px;
     width: 100%;
+
+    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.another-wayBtn:hover {
+    transform: scale(1.05);
+    background: #8875FF;
 }
 
 .googleBtn {
