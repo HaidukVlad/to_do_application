@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preload" href="/img/Group 182.png" as="image">
+    <link rel="preload" href="/img/Group 183.png" as="image">
+    <link rel="preload" href="/img/Group 181.png" as="image">
+    <title>Intro</title>
+</head>
+<body>
+    <div class="intro_page intro_page_logo" *ngIf="showFirstDiv">
+        <!-- <div class="black"></div> -->
+        <!-- <div class="hat">
+            <div class="time"><p>9:41</p></div>
+            <div class="options">
+                <img src="/img/Mobile Signal.png" alt="">
+                <img class="wifi" src="/img/Wifi.png" alt="">
+                <img src="/img/Battery.png" alt="">
+            </div>
+        </div> -->
+        <div class="flex_container" [class.active]="animStarted(5)">
+            <div class="flex_item_1"><img src="/img/check.png" alt="img">
+            </div>
+            <div class="flex_item_2"><p>UpTodoo</p></div>
+        </div>
+        <!-- <div class="white"></div> -->
+    </div>
+    <div class="intro_page intro_page_inf" *ngIf="showSecondDiv" [class.active]="isIntro(2)">
+        <div class="container container_first" [class.active]="introShows(2006)">
+            <!-- Кнопка Skip в левом верхнем углу -->
+            <button class="skip-button" (click)="lastIntroPage()">Skip</button>
+          
+            <!-- Карусель в центре экрана -->
+            <div class="carousel">
+              <!-- Первая часть карусели -->
+                <div class="slide slide1" [class.active]="isActiveSlide(1)">
+                    <img src="/img/Group 182.png" alt="First Slide">
+                    <div class="carousel_indicators">
+                        <div class="carousel_indicator car_1"></div>
+                        <div class="carousel_indicator car_2"></div>
+                        <div class="carousel_indicator car_3"></div>
+                    </div>
+                    <h2>Manage your tasks</h2>
+                    <p>You can easily manage all of your daily tasks in DoMe for free</p>
+                </div>
+              <!-- Вторая часть карусели -->
+                <div class="slide slide2" [class.active]="isActiveSlide(2)">
+                    <img src="/img/Group 183.png" alt="Second Slide">
+                    <div class="carousel_indicators">
+                        <div class="carousel_indicator car_1"></div>
+                        <div class="carousel_indicator car_2"></div>
+                        <div class="carousel_indicator car_3"></div></div>
+                    <h2>Create daily routine</h2>
+                    <p>In Uptodo  you can create your personalized routine to stay productive</p>
+                </div>
+              <!-- Третья часть карусели -->
+                <div class="slide slide3" [class.active]="isActiveSlide(3)">
+                    <img src="/img/Group 181.png" alt="Third Slide">
+                    <div class="carousel_indicators">
+                        <div class="carousel_indicator car_1"></div>
+                        <div class="carousel_indicator car_2"></div>
+                        <div class="carousel_indicator car_3"></div></div>
+                    <h2>Orgonaize your tasks</h2>
+                    <p>You can organize your daily tasks by adding your tasks into separate categories</p>
+                </div>
+            </div>
+          
+            <!-- Кнопки Back и Next в нижних боках -->
+            <button #buttonback class="back-button" (click)="previousSlide()">Back</button>
+            <button #buttonnext id="next" class="next-button" (click)="nextSlide(buttonnext)">Next</button>
+          </div>
+          
+    </div>
+    <div class="intro_page intro_page_login" [class.active]="isgetStarted(3)">
+        <div class="container container_second" [class.active]="introShows(13)">
+            <div class="flex_container_last">
+            <button (click)="backIntro()" class="backIntro"><img src="/img/Vector.png" alt=""></button>
+            <div class="welcome_text">
+                <h2>Welcome to UpTodo</h2>
+                <p>Please login to your account or create new account to continue</p>
+            </div>
+            <button class="login">LOGIN</button>
+            <button class="create">CREAT ACCOUNT</button></div>
+        </div>
+    </div>
+</body>
+</html>
