@@ -9,15 +9,17 @@
             <div class="input-container">
                 <label for="name">Username</label>
                 <input type="text" name="username" placeholder="Enter your Username" [(ngModel)]="username" (change)="onUsernameChange()">
+                <span class="error" *ngIf="hasUsernameError" > {{ usernameError }}</span>
             </div>
 
             <div class="input-container">
                 <label for="password">Password</label>
                 <input type="password" name="password" placeholder="Enter your Password" [(ngModel)]="password" (change)="onPasswordChange()">
+                <span class="error" *ngIf="hasPasswordError" > {{ passwordError}}</span>
             </div>
         </form>
 
-        <button type="button" class="loginBtn" disabled >Login</button>
+        <button type="button" class="loginBtn" disabled>Login</button>
 
         <div class="or-block">
             <span></span>

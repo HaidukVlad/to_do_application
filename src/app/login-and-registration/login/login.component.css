@@ -59,6 +59,11 @@ h1 {
     background: #1D1D1D;
 }
 
+.error {
+    font-size: 16px;
+    color: red;
+}
+
 .loginBtn {
     height: 48px;
     width: 100%;
@@ -72,6 +77,9 @@ h1 {
 .loginBtn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+.loginBtn:enabled {
     transition: transform 0.2s ease-in-out;
 }
 
