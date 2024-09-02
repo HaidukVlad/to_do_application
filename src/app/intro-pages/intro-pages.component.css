@@ -12,14 +12,13 @@ h2{
 p{
     color: rgb(255,255,255,0.44);
 }
-
-
 a{
     transition: transform 0.2s ease-in-out;
 }
 
-a:hover{
-    /* transform:scale(1.05) */
+button{
+    user-select: none;
+    cursor: pointer;
 }
 
 .intro_page{
@@ -28,44 +27,6 @@ a:hover{
     color: white;
     height: 100vh;
     
-}
-
-.hat{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.black{
-    position: absolute;
-    padding: 15px 110px;
-    border-radius: 30px;
-    background-color: black;
-    left: 47%;
-    top: 0.5%;
-    transform: translate(-50%, -50%);
-}
-
-.time{
-    padding: 13px 24px;
-}
-
-.options{
-    padding: 13px 24px;
-}
-
-.wifi{
-    padding: 0 5px;
-}
-
-.time{
-    font-family: SF Pro Display;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: -0.5px;
-    text-align: center;
-
 }
 
 .flex_container{
@@ -83,6 +44,10 @@ a:hover{
     opacity: 1;
 }
 
+.flex_item_1{
+    user-select: none;
+}
+
 .flex_item_2{
     font-size: 40px;
     font-weight: 700;
@@ -95,33 +60,6 @@ a:hover{
     color: white;
 }
 
-.white{
-    position: absolute;
-    bottom: 2.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    padding: 2.5px 67px;
-    background: white;
-    border-radius: 30px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .container{
     margin: 0 auto;
     max-width: 800px;
@@ -131,13 +69,38 @@ a:hover{
     transition: opacity 0.3s ease-in-out;
 }
 
+.container_first{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .container_first.active{
     opacity: 1;
 }
 
 .skip-button{
-    position: absolute;
-    top: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(255,255,255,0.44);
+    background: transparent;
+    border: transparent;
+    padding: 12px 24px;
+    margin: 25px;
+    z-index: 5;
+    transition: 0.2s ease-in-out;
+}
+
+.down_buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.back-button{   
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -147,34 +110,31 @@ a:hover{
     padding: 12px 24px;
     margin: 25px;
     z-index: 4;
+    transition: 0.2s ease-in-out;
 }
 
-.back-button{   
-    position: absolute;
-    bottom: 0;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: rgb(255,255,255,0.44);
-    background: transparent;
-    border: transparent;
-    padding: 12px 24px;
-    margin: 25px;
+.back-button:hover, .skip-button:hover{
+    color: rgb(255,255,255);
+
 }
 
 .next-button{
-    position: absolute;
-    bottom: 0;
-    right: 0;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color: rgb(255,255,255);
-    padding: 12px 24px;
     background: #8875FF;
     border: transparent;
     border-radius: 10px;
     margin: 25px;
+    z-index: 4;
+    padding: 12px 24px;
+    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+
+.next-button:hover, .backIntro:hover{
+    transform: scale(1.05);
 }
   
 .slide {
@@ -190,9 +150,11 @@ a:hover{
     height: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    z-index: 3;
 }
 .slide.active {
     opacity: 1;
+    z-index: 4;
 }
 
 .slide1.active .car_1, .slide2.active .car_2, .slide3.active .car_3{
@@ -205,7 +167,7 @@ a:hover{
     object-fit: contain; 
   }
 
-.slide h2, p{
+.slide h2, .slide p{
     text-align: center;
     width: 300px;
     padding-top: 30px;
@@ -230,32 +192,14 @@ a:hover{
     border-radius: 15px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .container_second.active{
     opacity: 1;
 }
 
 .backIntro{
     position: absolute;
-    /* top:8%; */
     top: 0;
-    left:0%;
+    left:0;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -264,12 +208,14 @@ a:hover{
     border: transparent;
     padding: 12px 24px;
     margin: 25px;
+    background: none;
+    border: 0;
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.2s ease-in-out;
 }
 
 .welcome_text{
-    position: absolute;
-    left: 30%;
-    top: 36%;
     width: 292px;
 }
 
@@ -286,34 +232,43 @@ a:hover{
     line-height: 24.08px;
     text-align: center;
     color: rgb(255,255,255,0.44);
+    padding: 26px 0 36px;
 }
 
 .login{
-    position: absolute;
-    bottom: 30%;
     background: #8875FF;
     border: transparent;
     color: white;
-    border-radius: 10px;
-    padding: 12px 128.5px;
-    left: 30%;
-    transform: translate(0%, -50%);
+    border-radius: 4px;
+    margin-bottom: 14px;
     text-decoration: none;
-    cursor: pointer;
+    z-index: 4;
+    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.login a, .create a{
+    
+    padding: 13px 89.5px;
+}
+
+.login:hover{
+    transform: scale(1.05);
 }
 
 .create{
-    position: absolute;
-    bottom: 22.5%;
     border: 1px #8875FF solid;
     background: transparent;
-    color: white;
-    border-radius: 10px;
-    padding: 11px auto;
-    left: 30%;
-    transform: translate(0%, -50%);
+    border-radius: 4px;
     text-decoration: none;
-    cursor: pointer;
+    z-index: 4;
+    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+    border: 1px solid #8875FF;
+}
+
+
+.create:hover{
+    transform: scale(1.05);
+    background: #8875FF;
 }
 
 .login, .create {
@@ -321,10 +276,17 @@ a:hover{
     height: 48px;
 }
 
+
+.flex_container_last a{
+    text-decoration: none;
+    color: white;
+}
+
 .flex_container_last{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
 }

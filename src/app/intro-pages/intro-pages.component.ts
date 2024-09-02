@@ -2,11 +2,23 @@ import { Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { NgIconComponent, provideIcons } from '@ng-icons/core';
+import { NgIconsModule } from '@ng-icons/core';
+import { heroChevronLeft } from '@ng-icons/heroicons/outline';
 
 @Component({
   selector: 'app-intro-pages',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterModule],
+  imports: [
+    CommonModule, 
+    RouterOutlet, 
+    RouterModule, 
+    NgIconsModule,
+    NgIconComponent
+  ],
+  providers: [
+    provideIcons({ heroChevronLeft })
+  ],
   templateUrl: './intro-pages.component.html',
   styleUrls: ['./intro-pages.component.css'],
 })
@@ -79,11 +91,9 @@ export class IntroPagesComponent implements OnInit {
   }
 
   backIntro(): void{ 
-    this.currentIntro--;
+    location.reload();
   }
   lastIntroPage(): void{
-    // this.showSecondDiv = false;
-    // this.showThridDiv = true;
     
     this.currentIntro = 3;
     setTimeout(()=> {
