@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { NgIf, CommonModule } from '@angular/common';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroChevronLeft } from '@ng-icons/heroicons/outline';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -11,7 +12,8 @@ import { heroChevronLeft } from '@ng-icons/heroicons/outline';
     CommonModule,
     FormsModule,
     NgIf,
-    NgIconComponent
+    NgIconComponent,
+    RouterModule
   ],
   providers: [
     provideIcons({ heroChevronLeft })
