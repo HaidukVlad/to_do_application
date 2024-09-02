@@ -1,0 +1,43 @@
+<div class="app">
+    <div class="container">
+        <button class="backToIntro"><ng-icon name="heroChevronLeft"></ng-icon>
+        </button>
+
+        <h1>Register</h1>
+
+        <form action="">
+            <div class="input-container">
+                <label for="name">Username</label>
+                <input type="text" name="username" placeholder="Enter your Username" [(ngModel)]="username" (change)="onUsernameChange()">
+                <span class="error" *ngIf="hasUsernameError" > {{ usernameError }}</span>
+            </div>
+
+            <div class="input-container">
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="Enter your Password" [(ngModel)]="password" (change)="onPasswordChange()">
+                <span class="error" *ngIf="hasPasswordError" > {{ passwordError}}</span>
+            </div>
+
+            <div class="input-container">
+                <label for="password">Confirm Password</label>
+                <input type="password" name="password" placeholder="Enter your Password" [(ngModel)]="password" (change)="onPasswordChange()">
+                <span class="error" *ngIf="hasPasswordError" > {{ passwordError}}</span>
+            </div>
+        </form>
+
+        <button type="button" class="loginBtn" disabled>Register</button>
+
+        <div class="or-block">
+            <span></span>
+            <p>or</p>
+            <span></span>
+        </div>
+
+        <button type="button" class="googleBtn another-wayBtn">Register with Google</button>
+        <button type="button" class="appleBtn another-wayBtn">Register with Apple</button>
+
+        <p class="register">Already have an account? <a href="">Login</a></p>
+    </div>
+</div>
+
+
