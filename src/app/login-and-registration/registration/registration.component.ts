@@ -19,7 +19,7 @@ import { RouterModule } from '@angular/router';
     provideIcons({ heroChevronLeft })
   ],
   templateUrl: './registration.component.html',
-  styleUrl: './registration.component.css'
+  styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
   public username: string = '';
