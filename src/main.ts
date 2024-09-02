@@ -3,6 +3,7 @@ import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 import { provideIcons } from '@ng-icons/core';
 import { heroChevronLeft } from '@ng-icons/heroicons/outline';
+bootstrapApplication(AppComponent, appConfig);
 
 const iconsProvider = provideIcons({ heroChevronLeft });
 

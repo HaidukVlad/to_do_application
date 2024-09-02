@@ -5,6 +5,7 @@ import { IntroPagesComponent } from './intro-pages/intro-pages.component';
 import { LoginAndRegistrationModule } from './login-and-registration/login-and-registration.module';
 import { LoginComponent } from "./login-and-registration/login/login.component";
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
