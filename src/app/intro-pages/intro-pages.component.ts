@@ -32,7 +32,6 @@ export class IntroPagesComponent implements OnInit {
       setTimeout(()=> {
         this.currenttime=2006
       }, 1);
-      
     }, 2005);
 
   }
@@ -78,18 +77,16 @@ export class IntroPagesComponent implements OnInit {
     return this.currentSlide === slideNumber;
   }
 
-  backIntro(): void{ 
+  backIntro(): void{
     this.currentIntro--;
   }
   lastIntroPage(): void{
     // this.showSecondDiv = false;
     // this.showThridDiv = true;
-    
     this.currentIntro = 3;
     setTimeout(()=> {
       this.currenttime=13
     }, 1);
-    
   }
 
 }
