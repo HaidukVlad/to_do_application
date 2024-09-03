@@ -26,7 +26,6 @@ button{
     background: #121212;
     color: white;
     height: 100vh;
-    
 }
 
 .flex_container{
@@ -100,7 +99,7 @@ button{
     width: 100%;
 }
 
-.back-button{   
+.back-button{
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -132,11 +131,10 @@ button{
     transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
 }
 
-
 .next-button:hover, .backIntro:hover{
     transform: scale(1.05);
 }
-  
+
 .slide {
     display: flex;
     flex-direction: column;
@@ -164,8 +162,8 @@ button{
 .slide img {
     width: 213px;
     height: 251px;
-    object-fit: contain; 
-  }
+    object-fit: contain;
+}
 
 .slide h2, .slide p{
     text-align: center;
@@ -247,7 +245,6 @@ button{
 }
 
 .login a, .create a{
-    
     padding: 13px 89.5px;
 }
 

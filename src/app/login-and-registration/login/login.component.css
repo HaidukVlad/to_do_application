@@ -59,6 +59,34 @@ h1 {
     background: #1D1D1D;
 }
 
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex-grow: 1;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-password:focus {
+    outline: none;
+}
+
+
 .error {
     font-size: 16px;
     color: red;

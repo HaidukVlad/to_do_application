@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgIf, CommonModule } from '@angular/common';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
-import { heroChevronLeft } from '@ng-icons/heroicons/outline';
+import { heroChevronLeft, heroEye, heroEyeSlash } from '@ng-icons/heroicons/outline';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -16,7 +16,7 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   providers: [
-    provideIcons({ heroChevronLeft })
+    provideIcons({ heroChevronLeft, heroEye, heroEyeSlash })
   ],
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css']
