@@ -9,9 +9,5 @@ const iconsProvider = provideIcons({ heroChevronLeft });
 
 bootstrapApplication(AppComponent, {
   ...appConfig,
-  providers: [
-    ...appConfig.providers,
-    iconsProvider
-  ]
-})
-.catch((err) => console.error(err));
+  providers: [...appConfig.providers, iconsProvider],
+}).catch((err) => console.error(err));
