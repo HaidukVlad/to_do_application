@@ -1,0 +1,152 @@
+.home_page {
+  position: relative;
+  background: #121212;
+  color: white;
+  height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  position: relative;
+  height: 100%;
+  /* opacity: 0;
+  transition: opacity 0.3s ease-in-out; */
+}
+
+h2 {
+  color: rgb(255, 255, 255, 0.87);
+  user-select: none;
+}
+
+p {
+  color: rgb(255, 255, 255, 0.44);
+  user-select: none;
+}
+a {
+  transition: transform 0.2s ease-in-out;
+  color: rgb(255, 255, 255, 0.87);
+}
+img {
+  user-select: none;
+}
+
+button {
+  user-select: none;
+  cursor: pointer;
+}
+
+.flex_container_all {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+}
+
+.nav_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+}
+
+.nav_container h2 {
+  padding-right: 13px;
+}
+
+.sort_icon {
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255, 0.87);
+  font-size: 55px;
+}
+
+.avatar {
+  background: rgb(255, 255, 255, 0.44);
+  width: 42px;
+  height: 42px;
+  border-radius: 30px;
+}
+
+.inf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inf img {
+  width: 227px;
+  height: 227px;
+}
+
+.inf h2 {
+  padding: 10px 0;
+}
+
+.inf p {
+  padding-bottom: 60px;
+}
+
+.panel_container {
+  background: #363636;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0 25px;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+}
+
+.panel_container button:not(.new_button) {
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255, 0.87);
+  font-size: 30px;
+}
+
+.panel_container p {
+  padding-top: 6px;
+  font-size: 12px;
+}
+
+.flex_item {
+  min-width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex_item_empty {
+  min-width: 20%;
+  height: 100%;
+  background: #363636;
+}
+
+.new_button {
+  position: absolute;
+  top: calc(50% - 76px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  background: none;
+  background: #8687e7;
+  border-radius: 30px;
+  padding: 4px 20px;
+  transform-origin: center;
+  will-change: transform;
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.new_button:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+.new_button h2 {
+  font-size: 40px;
+  font-weight: 300;
+  padding-bottom: 4px;
+}
