@@ -5,11 +5,12 @@ import { RouterModule } from '@angular/router';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { cssSortAz, cssProfile } from '@ng-icons/css.gg';
 import { hugeHome02, hugeCalendar03, hugeClock01 } from '@ng-icons/huge-icons';
+import { TaskModalComponent } from './task-modal/task-modal.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterModule, NgIconComponent],
+  imports: [CommonModule, RouterOutlet, RouterModule, NgIconComponent, TaskModalComponent],
   providers: [
     provideIcons({
       cssSortAz,
