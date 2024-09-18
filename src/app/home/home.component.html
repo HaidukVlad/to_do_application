@@ -35,8 +35,10 @@
             <p>Profile</p>
           </button>
         </div>
-        <button class="new_button"><h2>+</h2></button>
+        <button class="new_button" (click)="onButtonClick()"><h2>+</h2></button>
       </div>
     </div>
   </div>
 </div>
+
+<app-task-modal *ngIf="this.buttonClicked == true"></app-task-modal>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { RouterModule } from '@angular/router';
@@ -34,5 +34,31 @@ export class HomeComponent implements OnInit {
         this.currenttime = 2006;
       }, 1);
     }, 2005);
+
+    document.addEventListener('click', this.onDocumentClick.bind(this));
+  }
+
+  ngOnDestroy(): void {
+    document.removeEventListener('click', this.onDocumentClick.bind(this));
+  }
+
+  public buttonClicked: boolean = false;
+
+  onButtonClick() {
+    this.buttonClicked = true;
+  }
+
+  closeModal() {
+    if(this.buttonClicked == true){
+      this.buttonClicked = false;
+    }
+  }
+
+  @ViewChild(TaskModalComponent) modalRef!: TaskModalComponent;
+
+  onDocumentClick(event: MouseEvent) {
+    if (this.buttonClicked && !this.modalRef.isClickInside(event.target as HTMLElement)) {
+      this.closeModal();
+    }
   }
 }
